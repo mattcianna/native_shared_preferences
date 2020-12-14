@@ -62,7 +62,7 @@
 
 + (NSMutableDictionary *)getAllPrefs {
   NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-  NSDictionary *prefs = [[[NSUserDefaults alloc] initWithSuiteName:@"group.mattcianna.Filosofando"] persistentDomainForName:appDomain];
+  NSDictionary *prefs = [[[NSUserDefaults alloc] initWithSuiteName:@"group.mattcianna.Filosofando"] dictionaryRepresentation];
   NSMutableDictionary *filteredPrefs = [NSMutableDictionary dictionary];
   if (prefs != nil) {
     NSMutableDictionary *mappedDictionary = [NSMutableDictionary dictionary];
